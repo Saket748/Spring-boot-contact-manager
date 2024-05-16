@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="user/user_base::layout(~{::section})">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Payment</title>
+</head>
+<body>
+
+<section>
+    <h3 class="my-3 text-center" style="color:#FFFFFF">Support us</h3>
+    <div style="width: 909px" class="conatiner">
+        <input  type="number" class="form-control my-2" placeholder="Enter amount here" id="payment_field"/>
+
+    </div>
+
+    <div class="container text-center">
+        <button onclick="paymentStart()" class="btn btn-success">Pay</button>
+    </div>
+    <script>
+        $(document).ready(() =>{
+            $(".item").removeClass("active");
+            $("#support-link").addClass("active");
+        });
+    </script>
+</section>
+</body>
+</html>

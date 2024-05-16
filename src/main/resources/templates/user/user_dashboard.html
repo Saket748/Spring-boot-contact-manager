@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="user/user_base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>dashboard-user</title>
+	<style>
+		.text-white{
+		color:#ffffff;
+	</style>
+</head>
+<body>
+	
+	<section>
+
+		<div class="card-header">
+			<div class ="text-center">
+				<img style="height:150px; width:150px"  src="" class="show_contact_img" th:src="@{'/image/user_profile.png'}" alt="" />
+			</div>
+		</div>
+
+<!--		<section class="faq">-->
+			<div class="text-center mt-2">
+				<h1 class="text-white mt-3" >Start Adding your contacts on Cloud...</h1>
+			</div>
+			<a th:href="@{/user/add-contact-form}" class="btn btn-primary btn-block text-uppercase mt-2">Add new contact</a>
+
+<!--			<div class="faqbox">-->
+<!--				<span id="element">What is Contact-Hub</span>-->
+<!--				<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">-->
+<!--					<path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--					<path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--				</svg>-->
+
+<!--			</div>-->
+<!--			<div class="faqbox">-->
+<!--				<span>How much does Contact-Hub cost?</span>-->
+<!--				<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">-->
+<!--					<path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--					<path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--				</svg>-->
+
+<!--			</div>-->
+<!--			<div class="faqbox">-->
+<!--				<span>How can i use Contact-Hub?</span>-->
+<!--				<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">-->
+<!--					<path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--					<path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--				</svg>-->
+
+<!--			</div>-->
+<!--			<div class="faqbox">-->
+<!--				<span>Is it secure?</span>-->
+<!--				<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">-->
+<!--					<path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--					<path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--				</svg>-->
+
+<!--			</div>-->
+<!--		</section>-->
+<!--		<div class="card" style="width: 18rem;">-->
+
+<!--		<h3 class="my-3 text-center" style="color:#FFFFFF">Support us</h3>-->
+
+<!--			<input  type="number" class="form-control my-2" placeholder="Enter amount here" id="payment_field"/>-->
+
+<!--		</div>-->
+
+<!--		<div class="container text-center">-->
+<!--			<button onclick="paymentStart()" class="btn btn-success">Pay</button>-->
+<!--		</div>-->
+
+		<div class="support_body">
+			<div class="card_body">
+				<h3>Support us</h3>
+				<input type="text" placeholder="Enter amount " id="payment_field" class="form-control my-3"/>
+				<div class="container text-center mt-3">
+					<button onclick="paymentStart()" class="btn btn-success btn-block">
+						PAY
+					</button>
+				</div>
+			</div>
+		</div>
+
+<!--		<ul class="accordion">-->
+<!--			<li>-->
+<!--				<input type="radio" name="accordion" id="first">-->
+<!--				<label class="text-white" for="first">What is Contact-Hub?</label>-->
+<!--				<div class="content">-->
+<!--					<p class="text-white" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente corporis reprehenderit aliquam laboriosam! Veniam molestiae vel vero accusamus et architecto optio maxime eum!</p>-->
+<!--				</div>-->
+<!--			</li>-->
+<!--			<li>-->
+<!--				<input type="radio" name="accordion" id="secound">-->
+<!--				<label class="text-white" for="secound">How much does Contact-Hub Premium cost?</label>-->
+<!--				<div class="content">-->
+<!--					<p class="text-white" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente corporis reprehenderit aliquam laboriosam! Veniam molestiae vel vero accusamus et architecto optio maxime eum!</p>-->
+<!--				</div>-->
+<!--			</li>-->
+<!--			<li>-->
+<!--				<input type="radio" name="accordion" id="third">-->
+<!--				<label class="text-white" for="third">How can i use Contact-Hub?</label>-->
+<!--				<div class="content">-->
+<!--					<p class="text-white" > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente corporis reprehenderit aliquam laboriosam! Veniam molestiae vel vero accusamus et architecto optio maxime eum! </p>-->
+<!--				</div>-->
+<!--			</li>-->
+<!--			<li>-->
+<!--				<input type="radio" name="accordion" id="fourth">-->
+<!--				<label class="text-white" for="fourth">Is it secure?</label>-->
+<!--				<div class="content">-->
+<!--					<p class="text-white" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente corporis reprehenderit aliquam laboriosam! Veniam molestiae vel vero accusamus et architecto optio maxime eum!</p>-->
+<!--				</div>-->
+<!--			</li>-->
+<!--		</ul>-->
+
+
+		<script>
+			$(document).ready(() =>{
+				$(".item").removeClass("active");
+				$("#home-link").addClass("active");
+			});
+		</script>
+
+	</section>
+
+
+
+
+</body>
+</html>

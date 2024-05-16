@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login - Smart Contact Manager</title>
+</head>
+<body>
+
+<section>
+    <div class="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-item-center">
+                <div class="card-forgot">
+                    <!-- email form-->
+                    <div class="alert alert-success text-center mt-3" role="alert">
+                        We have send OTP successfully to your email!
+                    </div>
+
+                    <!-- message box -->
+                    <div th:if="${session.message}" class="container">
+                        <div class="alert alert-danger my-2 text-center" role="alert">
+                            <span th:text="${session.message}"></span>
+                        </div>
+                        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                    </div>
+
+                    <form method="post" action="" th:action="@{/verify-otp}">
+                        <div class="form-group">
+                            <input required="required" name="otp" type="number" placeholder="Enter your OTP" class="form-control"/>
+                        </div>
+                        <div class="container text-center">
+                            <button class="btn btn-success">verify OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
